@@ -8,11 +8,19 @@ div.input_area_container {
     margin: 0 auto;
 }
 div.input_area {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
 
+div.input_area_container > h1 {
+    width: 50%;
+    margin: 0 auto;
+}
 
 /* PURE STUFF BELOW */
 

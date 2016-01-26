@@ -11,6 +11,8 @@
 <div class="container">
 
 <div class="input_area_container">
+	<h1>mOCR Tag Modifier</h1>
+	<br>
 	<div class="input_area">
 		<input type="text" id="input" style="width: 75%; margin-right: 25px;"><button class="pure-button" id="go">Go</button>
 	</div>
@@ -21,6 +23,37 @@
 </div>
 
 <script id="entry-template" type="text/x-handlebars-template">
+
+	<p class="header">Original Tag</p>
+	<p>{{initial_tag}}</p>
+	<p class="header">Base Tag</p>
+	<p>{{base_tag}}</p>
+	<p class="header">Final Tag</p>
+	<textarea rows="5" cols="100" name="reply" readonly="readonly" onmouseover="this.select();">{{final_tag}}</textarea>
+
+	{{#if fields_to_remain}}
+	<h2>Warning!</h2>
+	<p class="header">These macros were going to be added, but the client may have modified this part of the tag already.</p>
+	{{#if fields_to_remain}}
+	<table class="pure-table">
+	<thead>
+	<tr><th>Field</th><th>Value</th></tr>
+	</thead>
+	<tbody>
+	{{#fields_to_remain}}
+	<tr><td>{{query_string_field}}</td><td>{{query_string_value}}</td></tr>
+	{{/fields_to_remain}}
+	</tbody>  
+	</table>
+	<br>
+	<p>Please reach out to the client to get confirmation the above tag is OK.</p>
+	{{else}}
+	None were detected.
+	{{/if}}
+
+	<br>
+	<hr>
+	<br>
 	<p class="header">Detected Fields (Input Tag)</p>
 	<table class="pure-table">
 	<thead>
@@ -43,27 +76,10 @@
 	{{/fields_to_modify}}
 	</tbody>  
 	</table>
-	<p class="header">Fields that were going to be added, but will not because they already exist in the input tag</p>
-	{{#if fields_to_remain}}
-	<table class="pure-table">
-	<thead>
-	<tr><th>Field</th><th>Value</th></tr>
-	</thead>
-	<tbody>
-	{{#fields_to_remain}}
-	<tr><td>{{query_string_field}}</td><td>{{query_string_value}}</td></tr>
-	{{/fields_to_remain}}
-	</tbody>  
-	</table>
-	{{else}}
-	None were detected.
+
+
 	{{/if}}
-	<p class="header">Original Tag</p>
-	<p>{{initial_tag}}</p>
-	<p class="header">Base Tag</p>
-	<p>{{base_tag}}</p>
-	<p class="header">Final Tag</p>
-	<textarea rows="5" cols="100" name="reply" readonly="readonly" onmouseover="this.select();">{{final_tag}}</textarea>
+
 </script>
 </div>
 </body>

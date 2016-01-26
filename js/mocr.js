@@ -3,7 +3,7 @@
 http://secure-gl.imrworldwide.com/cgi-bin/m?ci=nlsnci614&am=3&at=view&rt=banner&st=image&ca=nlsn31593&cr=crtve&pc=yume_plc0001&ce=yume&r=[timestamp]
 http://secure-gl.imrworldwide.com/cgi-bin/m?ci=nlsnci307&am=4&at=view&rt=banner&st=image&ca=nlsn31351&cr=creative&pc=Placement1_$domain&ce=yume&r=[timestamp]
 https://secure-gl.imrworldwide.com/cgi-bin/m?ci=nlsnci307&am=4&at=view&rt=banner&st=image&ca=nlsn31351&cr=creative&pc=Placement1_$domain&ce=yume&r=[timestamp]
-
+bad one: http://secure-gl.imrworldwide.com/cgi-bin/m?ci=nlsnci614&am=3&at=view&rt=banner&st=image&ca=nlsn31593&cr=crtve&pc=yume_plc0001&ce=yume&r=[timestamp]&c8=amed
 original replacement function is terrible:
 
 temp_pixel.replace('r=[timestamp]','c8=devgrp,${device_grouping}&c9=devid,${device_id}&c10=plt,${device_platform}&c13=asid,PF8F82B8C-03AD-D147-E040-070AAD31389C&r=${rand}');
